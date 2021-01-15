@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Participant Registration</title>
+    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Event Mania">
+
+    <link rel="stylesheet" href="/static/css/participant.css" >
+    <link rel="stylesheet" href="/static/css/home.css" >
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.png">
+    <body>
+        <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link" >HOME</label> </a></div>
+        <div class="space"><h3>You are Registering for</h3>
+          <p class="details">
+                <b> Event Name : </b>{{event.name}}<br>
+                <b> Event Description : </b>{{event.description}}<br>
+                <b> Date(s):</b> {{ event.fromdate }} - {{ event.todate }}<br>
+                <b> Time :</b>{{event.fromtime}} - {{event.totime}} <br>
+                <b> Registration ends at: </b> {{event.enddate}}  {{ event.endtime}}<br>
+                <b> Venue: </b> {{event.location}}
+         </p>
+        </div>
+        <div class="form" aria-autocomplete="off">
+            <h1>Participant Registration</h1>
+            <form method="post" name="partreg" action="Submit_Participant">
+                {% csrf_token %}
+                <label>Name : </label>
+                <input type="text" placeholder="Name" id="name" name="name"><span id="errorname"></span><br>
+                <label>Contact No : </label>
+                <input type="text" placeholder="Contact No" id="phno" name="phno"><span id="errorphno"></span><br>
+                <label>Email ID : </label>
+                <input type="email" placeholder="Email ID" id="email" name="email"><span></span><br>
+                <label>Registration-Type : </label>
+                <input type="radio" name="type">Individual <input type="radio" name="type">Group<br>
+                <label>No of People : </label> 
+                <input type="number" placeholder="no of people" id="no" name="no"><span></span><br>
+                <input type=submit value="Submit" id="subpart">
+                <input type="hidden" value="{{event.id}}" name="eid">
+            </form>
+        </div>
+    </body>
+
+</html>

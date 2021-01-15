@@ -1,0 +1,22 @@
+.home
+{
+    width:20%;
+    height:10%;
+    color:inherit;
+    font-size:20px;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.home img
+{
+    height:40%;
+    width:15%;
+    float:left;
+}
+.link{
+    position:absolute;
+    left:15%;
+    font-size:20px;
+    color:white;
+}

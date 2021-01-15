@@ -1,0 +1,116 @@
+body
+{
+    background-image:url("/static/images/back2.jpg");
+    background-size: cover;
+    height:100%;
+    font-family:'century gothic';
+}
+a
+{
+    text-decoration:none;
+    color:inherit;
+}
+
+.form
+{
+    overflow:auto;
+    color:black;
+    width:40%;
+    font-size:20px;
+    text-align:center;
+    padding:50px;
+    margin:60px 40px 20px 40px;
+    font-family:'century gothic';
+    backdrop-filter: blur(50px);
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form label
+{
+    font-weight:bold;
+}
+
+h1
+{
+    text-decoration:underline;
+}
+
+.space
+{
+    width:50%;
+    float:left;
+    color:white;
+}
+.space h5
+{
+    margin-top:10px;
+    padding-left:150px;
+    font-size:20px;
+}
+
+.space h3{
+    margin-top:50px;
+    padding-left:150px;
+    font-size:50px;
+}
+
+.details
+{
+    padding-left:150px;
+    font-size:20px;
+}
+
+.events
+{
+    color:white;
+    font-family:'century gothic';
+    width:80%;
+    margin-left:10%;
+    margin-top:10px;
+    font-size:20px;
+    padding:10px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.events sub
+{
+    font-size:15px;
+}
+
+.events li
+{
+    list-style-type: none;
+    padding-bottom:5px;
+    margin-bottom:5px;
+    border-bottom:2px solid black;
+}
+
+
+
+.form input,textarea
+{
+    margin:10px;
+    padding:5px;
+    font-family:'century gothic';
+    border:1px solid black;
+}
+
+.lbl
+{
+    width:80%;
+}
+span
+{
+    font-size:10px;
+    color:red;
+}
+
+#subpart
+{
+    background-color:black;
+    color:white;
+    font-weight: bold;
+    font-size:15px;
+    padding:10px 20px 10px 20px;
+}

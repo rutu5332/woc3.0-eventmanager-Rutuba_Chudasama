@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Participant Registration</title>
+    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Event Mania">
+
+    <link rel="stylesheet" href="/static/css/participant.css" >
+    <link rel="stylesheet" href="/static/css/home.css" >
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.png">
+    <style>
+        body
+        {
+            background-image:url("/static/images/back3.jpg");
+        }
+    </style>
+    <body>
+        <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link">HOME</label> </a></div>
+        <div class="events"><h1>Register Yourself for an Event</h1>
+            <h3>Be a Part of an event that you like<sub>Click on event to register for that event</sub></h3> 
+            <ul>
+                {% for event in events%}
+                 {% if event.is_past_due %}
+                    <a href="Participant_Registration?id={{event.id}}">
+                        <li> <b>{{ event.name }} </b> <br> <br>
+                            <b> Description: </b> {{event.description}}<br><br>
+                            <b> Date(s):</b> {{ event.fromdate }} - {{ event.todate }}<br>
+                            <b> Time :</b>{{event.fromtime}} - {{event.totime}} <br>
+                            <b> Registration ends at: </b> {{event.enddate}}  {{ event.endtime}}<br>
+                            <b> Venue: </b> {{event.location}}
+                        </li>
+                    </a>
+                 {%endif%}
+                {% endfor %}
+            </ul>
+        </div>
+        
+    </body>
+
+</html>

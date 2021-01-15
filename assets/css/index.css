@@ -1,0 +1,68 @@
+body
+{
+    background-image:url("/static/images/back5.jpg");
+    background-size: cover;
+    height:100%;
+    
+}
+.main
+{
+    overflow:auto;
+    color:white;
+    font-size:30px;
+    padding:50px;
+    margin:40px;
+    margin-top:60px;
+    font-family:'century gothic';
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo
+{
+    height:30%;
+    width:10%;
+    float:left;
+    margin-left:100px;
+}
+.head
+{
+    font-family:'Maiandra GD';
+    font-size:75px;
+    text-shadow: 2px 2px 8px #FF0000;
+}
+.main a
+{
+    text-decoration:none ;
+    color:white;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:10px;
+    margin-right:10px;
+}
+h1 sub
+{
+    font-size:18px;
+    font-family:'century gothic';
+}
+.row
+{
+    height:40%;
+    width:100%;
+}
+.services
+{
+    height:80%;
+    width:30%;
+    text-align:center;
+    float:left;
+}
+
+.services img
+{
+    height:90%;
+    width:90%;
+    box-shadow: 0 6px 10px 0 rgb(115, 77, 221), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

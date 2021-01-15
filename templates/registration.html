@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Registration</title>
+    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Event Mania">
+
+    <link rel="stylesheet" href="/static/css/registration.css" >
+    <link rel="stylesheet" href="/static/css/home.css" >
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.png">
+    <body>
+        <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link" style="color:black;">HOME</label> </a></div>
+        <div class="space"><h3>Register Your<br> Event Here</h3></div>
+        <div class="form">
+            <h1>Event Registration</h1>
+            <form method="post" name="evereg" action="Submit_Registration" autocomplete="off">
+                {% csrf_token %}
+                <label>Event Name : </label>
+                <input type="text" placeholder="Event Name" id="ename" name="ename"><span id="errorname"></span><br>
+                <label style="position:absolute;left:140px;margin-top:20px;">Description : </label>
+                <textarea row=20 col=40 placeholder="Description here" id="edesc" name="edesc"></textarea><span></span><br>
+                <label>Location : </label>
+                <input type="text" placeholder="Location" id="eloc" name="eloc"><span></span><br>
+                <label>From : </label>
+                <input type="date" id="fdate" name="fdate"> <input type="time" id="ftime" name="ftime"><span></span><br>
+                <label>To : </label>
+                <input type="date" id="tdate" name="tdate"> <input type="time" id="ttime" name="ttime"><span></span><br>
+                <label>Registration Deadline : </label>
+                <input type="date" id="edate" name="edate"> <input type="time" id="etime" name="etime"><span></span><br>
+                <label>Host E-mail : </label>
+                <input type="email" placeholder="E-mail" id="hemail" name="hemail"><span></span><br>
+                <label>Host-Password : </label> 
+                <input type="password" placeholder="Password" id="hpass" name="hpass"><span></span><br>
+                <input type=submit value="Submit" id="subreg" onclick="valid();">
+            </form>
+        </div>
+    </body>
+
+    <script src="/static/js/registration.js"></script>
+</html>
