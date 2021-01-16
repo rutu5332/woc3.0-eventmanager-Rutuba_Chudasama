@@ -26,7 +26,7 @@
         </div>
         <div class="form" aria-autocomplete="off">
             <h1>Participant Registration</h1>
-            <form method="post" name="partreg" action="Submit_Participant" onsubmit="return check()">
+            <form method="post" name="partreg" action="Submit_Participant" onsubmit="return check()" autocomplete="off">
                 {% csrf_token %}
                 <input type="hidden" value="{{registered}}" id="cons">
                 <label>Name : </label>
