@@ -17,7 +17,7 @@ body
     margin:20px 40px 20px 40px;
     font-family:'century gothic';
     font-weight:bold;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(50px);
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -53,8 +53,8 @@ h1
 }
 span
 {
-    font-size:10px;
-    color:red;
+    font-size:15px;
+    color:white;
 }
 
 #subreg

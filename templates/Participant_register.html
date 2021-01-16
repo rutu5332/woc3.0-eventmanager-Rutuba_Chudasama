@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/static/css/participant.css" >
     <link rel="stylesheet" href="/static/css/home.css" >
     <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.png">
+
     <body>
         <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link" >HOME</label> </a></div>
         <div class="space"><h3>You are Registering for</h3>
@@ -24,22 +25,23 @@
         </div>
         <div class="form" aria-autocomplete="off">
             <h1>Participant Registration</h1>
-            <form method="post" name="partreg" action="Submit_Participant">
+            <form method="post" name="partreg" action="Submit_Participant" onsubmit="return check()">
                 {% csrf_token %}
                 <label>Name : </label>
                 <input type="text" placeholder="Name" id="name" name="name"><span id="errorname"></span><br>
                 <label>Contact No : </label>
                 <input type="text" placeholder="Contact No" id="phno" name="phno"><span id="errorphno"></span><br>
                 <label>Email ID : </label>
-                <input type="email" placeholder="Email ID" id="email" name="email"><span></span><br>
+                <input type="email" placeholder="Email ID" id="email" name="email"><span id="erroremail"></span><br>
                 <label>Registration-Type : </label>
-                <input type="radio" name="type">Individual <input type="radio" name="type">Group<br>
+                <input type="radio" name="type" value="individual" id="ind" onclick="individual_sel()">Individual
+                <input type="radio" name="type" value="group" id="grp" onclick="group_sel()">Group<span id="errortype"></span><br>
                 <label>No of People : </label> 
-                <input type="number" placeholder="no of people" id="no" name="no"><span></span><br>
-                <input type=submit value="Submit" id="subpart">
+                <input type="number" placeholder="no of people" id="no" name="no"><span id="errorno"></span><br>
                 <input type="hidden" value="{{event.id}}" name="eid">
+                <input type=submit value="Submit" id="subpart">
             </form>
         </div>
     </body>
-
+    <script src="/static/js/Participation.js"></script>
 </html>

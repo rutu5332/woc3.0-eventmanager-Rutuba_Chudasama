@@ -63,6 +63,7 @@ h1
 .events
 {
     color:white;
+    overflow:hidden;
     font-family:'century gothic';
     width:80%;
     margin-left:10%;
@@ -84,6 +85,9 @@ h1
     padding-bottom:5px;
     margin-bottom:5px;
     border-bottom:2px solid black;
+    width:45%;
+    float:left;
+    margin-right:20px;
 }
 
 
@@ -102,8 +106,8 @@ h1
 }
 span
 {
-    font-size:10px;
-    color:red;
+    font-size:15px;
+    color:white;
 }
 
 #subpart

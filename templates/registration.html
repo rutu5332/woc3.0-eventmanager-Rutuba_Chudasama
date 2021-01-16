@@ -15,7 +15,7 @@
         <div class="space"><h3>Register Your<br> Event Here</h3></div>
         <div class="form">
             <h1>Event Registration</h1>
-            <form method="post" name="evereg" action="Submit_Registration" autocomplete="off">
+            <form method="post" name="evereg" action="index" autocomplete="off" onsubmit="return valid()">
                 {% csrf_token %}
                 <label>Event Name : </label>
                 <input type="text" placeholder="Event Name" id="ename" name="ename"><span id="errorname"></span><br>
@@ -33,7 +33,7 @@
                 <input type="email" placeholder="E-mail" id="hemail" name="hemail"><span></span><br>
                 <label>Host-Password : </label> 
                 <input type="password" placeholder="Password" id="hpass" name="hpass"><span></span><br>
-                <input type=submit value="Submit" id="subreg" onclick="valid();">
+                <input type=submit value="Submit" id="subreg" >
             </form>
         </div>
     </body>

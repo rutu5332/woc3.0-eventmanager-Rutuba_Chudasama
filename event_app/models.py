@@ -26,9 +26,9 @@ class Participant(models.Model):
     name=models.CharField(max_length=20)
     phone =models.CharField(max_length=20) 
     email=models.EmailField()
-    rtype=models.CharField(max_length=10)
-    participants=models.IntegerField()
-    event=models.IntegerField()
+    participation_type=models.CharField(max_length=10)
+    no_of_people=models.IntegerField()
+    event_id=models.IntegerField()
 
     def __str__(self):
         return self.name
