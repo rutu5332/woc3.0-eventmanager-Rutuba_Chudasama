@@ -13,47 +13,105 @@ function valid()
     var email=document.getElementById('hemail').value;
     var pass=document.getElementById('hpass').value;
 
+    
+
     if(name == ""){
         document.getElementById('errorname').innerHTML="*please enter name";
         document.getElementById('ename').style.borderColor='red';
         return false; 
     }
+    else{
+        document.getElementById('errorname').innerHTML="";
+        document.getElementById('ename').style.borderColor='black';
+    }
+    if(desc == ""){
+        document.getElementById('errordesc').innerHTML="<br>*please enter description";
+        document.getElementById('edesc').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('errordesc').innerHTML="";
+        document.getElementById('edesc').style.borderColor='black';
+    }
+    if(loc==""){
+        document.getElementById('errorloc').innerHTML="*please enter location";
+        document.getElementById('eloc').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('errorloc').innerHTML="";
+        document.getElementById('eloc').style.borderColor='black';
+    }
+    if(fdate == ""){
+        document.getElementById('errorfdate').innerHTML="*please enter from date";
+        document.getElementById('fdate').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('errorfdate').innerHTML="";
+        document.getElementById('fdate').style.borderColor='black';
+    }
+    if(ftime == ""){
+        document.getElementById('errorfdate').innerHTML="*please enter from time";
+        document.getElementById('ftime').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('errorfdate').innerHTML="";
+        document.getElementById('ftime').style.borderColor='black';
+    }
+    if(tdate == ""){
+        document.getElementById('errortdate').innerHTML="*please enter to date";
+        document.getElementById('tdate').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('errortdate').innerHTML="";
+        document.getElementById('tdate').style.borderColor='black';
+    }
+    if(ttime == ""){
+        document.getElementById('errortdate').innerHTML="*please enter to time";
+        document.getElementById('ttime').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('errortdate').innerHTML="";
+        document.getElementById('ttime').style.borderColor='black';
+    }
+    if(edate == ""){
+        document.getElementById('erroredate').innerHTML="<br>*please enter deadline date";
+        document.getElementById('edate').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('erroredate').innerHTML="";
+        document.getElementById('edate').style.borderColor='black';
+    }
+    if(etime == ""){
+        document.getElementById('erroredate').innerHTML="<br>*please enter deadline time";
+        document.getElementById('etime').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('erroredate').innerHTML="";
+        document.getElementById('etime').style.borderColor='black';
+    }
+    if(email == ""){
+        document.getElementById('erroremail').innerHTML="*please enter host email";
+        document.getElementById('hemail').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('erroremail').innerHTML="";
+        document.getElementById('hemail').style.borderColor='black';
+    }
+    if(pass == ""){
+        document.getElementById('errorpass').innerHTML="*please enter password";
+        document.getElementById('hpass').style.borderColor='red';
+        return false;
+    }
+    else{
+        document.getElementById('errorpass').innerHTML="";
+        document.getElementById('hpass').style.borderColor='black';
+    }
 }
-
-$(document).ready(function()
-{
-	$("#subreg").click(function()
-	{
-        alert("call");
-        var name=$("#ename").val().trim();
-        var desc=$("#edesc").val().trim();
-        var loc=$("#eloc").val().trim();
-        var fdate=$("#fdate").val().trim();
-        var ftime=$("#ftime").val().trim();
-        var tdate=$("#tdate").val().trim();
-        var ttime=$("#ttime").val().trim();
-        var edate=$("#edate").val().trim();
-        var etime=$("#etime").val().trim();
-        var email=$("#hemail").val().trim();
-        var pass=$("#hpass").val().trim();
-        alert("call");
-
-        if(name==''){
-            $('#errorname').html('please enter name');
-            evereg.ename.focus();
-            return false;
-        }
-        
-        var re = /^[a-zA-Z ]*$/;
-        if(!re.test(name)) 
-        {
-            $('#errorname').html('Username must contain only letters');
-            evereg.ename.focus();
-            return false;
-        }
-        else
-        {
-            $('#errorname').html('');
-        }
-    });
-});

@@ -15,24 +15,24 @@
         <div class="space"><h3>Register Your<br> Event Here</h3></div>
         <div class="form">
             <h1>Event Registration</h1>
-            <form method="post" name="evereg" action="index" autocomplete="off" onsubmit="return valid()">
+            <form method="post" name="evereg" action="Submit_Registration" autocomplete="off" onsubmit="return valid()">
                 {% csrf_token %}
                 <label>Event Name : </label>
                 <input type="text" placeholder="Event Name" id="ename" name="ename"><span id="errorname"></span><br>
                 <label style="position:absolute;left:140px;margin-top:20px;">Description : </label>
-                <textarea row=20 col=40 placeholder="Description here" id="edesc" name="edesc"></textarea><span></span><br>
+                <textarea row=20 col=40 placeholder="Description here" id="edesc" name="edesc"></textarea><span id="errordesc"></span><br>
                 <label>Location : </label>
-                <input type="text" placeholder="Location" id="eloc" name="eloc"><span></span><br>
+                <input type="text" placeholder="Location" id="eloc" name="eloc"><span id="errorloc"></span><br>
                 <label>From : </label>
-                <input type="date" id="fdate" name="fdate"> <input type="time" id="ftime" name="ftime"><span></span><br>
+                <input type="date" id="fdate" name="fdate"> <input type="time" id="ftime" name="ftime"><span id="errorfdate"></span><br>
                 <label>To : </label>
-                <input type="date" id="tdate" name="tdate"> <input type="time" id="ttime" name="ttime"><span></span><br>
+                <input type="date" id="tdate" name="tdate"> <input type="time" id="ttime" name="ttime"><span id="errortdate"></span><br>
                 <label>Registration Deadline : </label>
-                <input type="date" id="edate" name="edate"> <input type="time" id="etime" name="etime"><span></span><br>
+                <input type="date" id="edate" name="edate"> <input type="time" id="etime" name="etime"><span id="erroredate"></span><br>
                 <label>Host E-mail : </label>
-                <input type="email" placeholder="E-mail" id="hemail" name="hemail"><span></span><br>
+                <input type="email" placeholder="E-mail" id="hemail" name="hemail"><span id="erroremail"></span><br>
                 <label>Host-Password : </label> 
-                <input type="password" placeholder="Password" id="hpass" name="hpass"><span></span><br>
+                <input type="password" placeholder="Password" id="hpass" name="hpass"><span id="errorpass"></span><br>
                 <input type=submit value="Submit" id="subreg" >
             </form>
         </div>

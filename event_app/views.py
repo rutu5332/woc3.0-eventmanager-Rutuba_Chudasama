@@ -62,9 +62,17 @@ def participant(request):
 def participant_registration(request):
     template = loader.get_template('Participant_register.html')
     eid=request.GET['id']
+    parts=Participant.objects.all()
+    cons=""
+    for part in parts:
+        print(part.event_id)
+        if int(part.event_id) == int(eid):
+            cons += str(part.phone) + "/"
+
     event = Event.objects.get(id=eid)
     context={
-        'event':event
+        'event':event,
+        'registered':cons
     }
     return HttpResponse(template.render(context , request))
 

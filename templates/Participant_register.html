@@ -21,12 +21,14 @@
                 <b> Time :</b>{{event.fromtime}} - {{event.totime}} <br>
                 <b> Registration ends at: </b> {{event.enddate}}  {{ event.endtime}}<br>
                 <b> Venue: </b> {{event.location}}
+                {{registered}}
          </p>
         </div>
         <div class="form" aria-autocomplete="off">
             <h1>Participant Registration</h1>
             <form method="post" name="partreg" action="Submit_Participant" onsubmit="return check()">
                 {% csrf_token %}
+                <input type="hidden" value="{{registered}}" id="cons">
                 <label>Name : </label>
                 <input type="text" placeholder="Name" id="name" name="name"><span id="errorname"></span><br>
                 <label>Contact No : </label>

@@ -51,6 +51,22 @@ function check()
         document.getElementById('phno').style.borderColor='black';
     }
 
+    conts = document.getElementById('cons').value;
+    var res = new Array();
+    res = conts.split("/");
+    var i;
+    for(i=0; i<res.length ; i++)
+    {
+        if(res[i] == phno)
+        {
+            document.getElementById('errorphno').innerHTML="*Already registered with this event";
+            document.getElementById('phno').style.borderColor='red';
+            return false;
+        }
+    }
+    document.getElementById('errorphno').innerHTML="";
+    document.getElementById('phno').style.borderColor='black';
+
     if(email == ""){
         document.getElementById('erroremail').innerHTML="*please enter email";
         document.getElementById('email').style.borderColor='red';
