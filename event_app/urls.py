@@ -25,4 +25,5 @@ urlpatterns = [
     path('Participant' , views.participant , name='Participant'),
     path('Participant_Registration' , views.participant_registration, name='Participant Registration'),
     path('Submit_Participant' , views.Participant_sub),
+    path('Event_Dashboard' , views.dashboard , name ='Event_Dashboard')
 ]

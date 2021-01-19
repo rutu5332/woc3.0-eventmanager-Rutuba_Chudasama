@@ -106,3 +106,17 @@ def Participant_sub(request):
     }
     return HttpResponse(template.render(context , request))
 
+
+
+def dashboard(request):
+    template = loader.get_template('Event_Dashboard.html')
+    parts=[]
+    if request.method=='POST':
+        eid=request.POST['eid']
+        parts = Participant.objects.filter(event_id = eid)
+        print(parts)
+    context = {
+        'parts' : parts
+    }
+    return HttpResponse(template.render(context , request))
+

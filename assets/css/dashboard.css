@@ -1,0 +1,58 @@
+body
+{
+    background-image:url("/static/images/back11.jpg");
+    background-size: cover;
+    height:100%;
+    font-family:'century gothic';
+}
+
+.box{
+    width:80%;
+    margin:10%;
+    color:white;
+    padding:10px;
+    text-align:center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1
+{
+    text-decoration:underline;
+}
+
+.box input
+{
+    margin:10px;
+    padding:5px;
+    font-family:'century gothic';
+    border:1px solid black;
+}
+
+.box input[type="submit"]
+{
+    background-color:black;
+    color:white;
+    font-weight: bold;
+    font-size:18px;
+    padding:10px 20px 10px 20px;
+}
+
+.display
+{
+    text-align:center;
+    width:100%;
+    margin-top:20px;
+}
+.display table
+{
+    border:1px solid black;
+}
+
+.display th,td
+{
+    border:1px solid black;
+    padding:10px;
+    margin:0px;
+    text-align:center;
+}

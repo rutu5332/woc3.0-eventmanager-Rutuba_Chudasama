@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Participant Registration</title>
+    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Event Mania">
+
+    <link rel="stylesheet" href="/static/css/dashboard.css" >
+    <link rel="stylesheet" href="/static/css/home.css" >
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.png">
+
+    <body>
+        <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link" >HOME</label> </a></div>
+        <div class="box">
+            <h1>Event DashBoard</h1>
+            <form method="POST" action="Event_Dashboard">
+                {%csrf_token %}
+                <label>Event Id : </label>
+                <input type="text" name="eid" id="eid" placeholder="Event Id"><span id="errorid"></span><br>
+                <label>Password : </label>
+                <input type="password" name="hpass" id="hpass" placeholder="Password"><span id="errorpass"></span><br>
+                <input type="submit" value="Find" >
+            </form>
+            <span id="error"></span>
+            <div class="display" id="display">
+                {%if parts %}
+                 <center>
+                    <table cellspacing=0 cellpadding=0>
+                        <tr>
+                            <th>Participant-Id</th>
+                            <th>Name</th>
+                            <th>Contact No.</th>
+                            <th>E-mail ID</th>
+                            <th>Participation Type</th>
+                            <th>No. of People</th>
+                        </tr>
+                     {% for p in parts %}
+                        <tr>
+                            <td>{{p.id}}</td>
+                            <td>{{p.name}}</td>
+                            <td>{{p.phone}}</td>
+                            <td>{{p.email}}</td>
+                            <td>{{p.participation_type}}</td>
+                            <td>{{p.no_of_people}}</td>
+                        </tr>
+                      {% endfor %}
+                    </table>
+                </center>
+                {%endif %}
+            </div>
+        </div>
+    </body>
+</html>
