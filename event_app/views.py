@@ -110,13 +110,24 @@ def Participant_sub(request):
 
 def dashboard(request):
     template = loader.get_template('Event_Dashboard.html')
+    ps = Participant.objects.all()
+    eids = "/"
+    for p in ps:
+        eids += str(p.event_id) + "/"
     parts=[]
+    err = " "
     if request.method=='POST':
         eid=request.POST['eid']
-        parts = Participant.objects.filter(event_id = eid)
-        print(parts)
+        pas=request.POST['hpass']
+        eve = Event.objects.get(id=eid)
+        if eve.host_pass == pas: 
+            parts = Participant.objects.filter(event_id = eid)
+        else:
+            err = "  * Invalid Password !!  "
     context = {
-        'parts' : parts
+        'parts' : parts,
+        'part_ids':eids,
+        'error' : err
     }
     return HttpResponse(template.render(context , request))
 

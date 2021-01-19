@@ -15,15 +15,16 @@
         <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link" >HOME</label> </a></div>
         <div class="box">
             <h1>Event DashBoard</h1>
-            <form method="POST" action="Event_Dashboard">
+            <form method="POST" action="Event_Dashboard" onsubmit="return valid_dashboard()">
                 {%csrf_token %}
+                <input type="hidden" value="{{part_ids}}" id="pids">
                 <label>Event Id : </label>
                 <input type="text" name="eid" id="eid" placeholder="Event Id"><span id="errorid"></span><br>
                 <label>Password : </label>
                 <input type="password" name="hpass" id="hpass" placeholder="Password"><span id="errorpass"></span><br>
                 <input type="submit" value="Find" >
             </form>
-            <span id="error"></span>
+            <span id="error"> {{error}}</span>
             <div class="display" id="display">
                 {%if parts %}
                  <center>
@@ -52,4 +53,5 @@
             </div>
         </div>
     </body>
+    <script src="/static/js/dashboard.js"></script>
 </html>

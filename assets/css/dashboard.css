@@ -56,3 +56,7 @@ h1
     margin:0px;
     text-align:center;
 }
+
+#error{
+    background-color: red;
+}
