@@ -15,7 +15,7 @@
         <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link" >HOME</label> </a></div>
         <div class="box">
             <h1>Event DashBoard</h1>
-            <form method="POST" action="Event_Dashboard" onsubmit="return valid_dashboard()">
+            <form method="POST" action="Event_Dashboard" onsubmit="return valid_dashboard()" autocomplete="off">
                 {%csrf_token %}
                 <input type="hidden" value="{{part_ids}}" id="pids">
                 <label>Event Id : </label>

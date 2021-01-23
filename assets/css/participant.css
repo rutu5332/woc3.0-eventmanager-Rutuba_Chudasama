@@ -67,16 +67,19 @@ h1
     font-family:'century gothic';
     width:80%;
     margin-left:10%;
-    margin-top:10px;
+    margin-top:20px;
     font-size:20px;
     padding:10px;
     backdrop-filter: blur(50px);
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.events sub
+.events h1,h3{
+    text-align:center;
+}
+.events label
 {
     font-size:15px;
+    text-align:center;
 }
 
 .events li

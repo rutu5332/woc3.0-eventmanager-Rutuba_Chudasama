@@ -19,7 +19,8 @@
     <body>
         <div class="home"><a href="index"><img src="/static/images/favicon.png"><label class="link">HOME</label> </a></div>
         <div class="events"><h1>Register Yourself for an Event</h1>
-            <h3>Be a Part of an event that you like<sub>Click on event to register for that event</sub></h3> 
+            <h3>Be a Part of an event that you like <label>(Click on event to register for that event)</label> </h3> 
+            <hr>
             <ul>
                 {% for event in events%}
                  {% if event.is_past_due %}
