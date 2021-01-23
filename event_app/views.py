@@ -47,6 +47,7 @@ def registration_sub(request):
     message.content_subtype="html"
     message.send()
     context = {
+        'msg':"For Registering your Event with us"
         
     }
     return HttpResponse(template.render(context , request))
@@ -82,7 +83,7 @@ def Participant_sub(request):
     phno=request.POST['phno']
     mail=request.POST['email']
     rtype=request.POST['type']
-    nos=request.POST['no']
+    nos=request.POST.get('no' , 1)
     eid=request.POST['eid']
     Part = Participant(
         name=name , phone=phno, email=mail, participation_type=rtype, no_of_people=nos, event_id=eid
@@ -90,12 +91,11 @@ def Participant_sub(request):
     Part.save()
     parti = Participant.objects.latest('id')
     eve = Event.objects.get(id =eid)
-    account_sid='AC23b004be8e062afc0d36f303cfa53c45'
-    auth_token='bc6d4843cc218e887979f4b05fa8501d'
+    
     client=Client(account_sid,auth_token)
     msg2 = "Thank you "+name + " for registering your participation with us.\n\nParticipant Id : "+str(parti.id) 
     msg2+= "\nEvent Name : "+eve.name +"\nLocation : "+eve.location +"\nDate(s) : "+str(eve.fromdate) + " - " +str(eve.todate)
-    msg2 += "\nTime : "+eve.fromtime+" - "+eve.totime + "\nParticipation Type : "+rtype + "\nNo. of People : "+nos
+    msg2 += "\nTime : "+eve.fromtime+" - "+eve.totime + "\nParticipation Type : "+rtype + "\nNo. of People : "+str(nos)
     msg2 += "\n\nEVENT MANIA"
     msg=client.messages.create(
         body=msg2,
@@ -103,6 +103,7 @@ def Participant_sub(request):
         to='+91'+phno,
     )
     context = {
+        'msg' : "For Registering your Participation with us"
     }
     return HttpResponse(template.render(context , request))
 
