@@ -3,7 +3,7 @@
     width:8%;
     height:6%;
     color:inherit;
-    font-size:20px;
+    font-size:2vh;
     position:absolute;
     top:0px;
     left:0px;
@@ -19,6 +19,6 @@
     position:absolute;
     left:40%;
     top:5%;
-    font-size:20px;
+    font-size:1.30vw;
     color:white;
 }

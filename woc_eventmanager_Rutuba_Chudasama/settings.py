@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'event_app.apps.EventAppConfig',
+    'event_app.apps.EventAppConfig',  # add the app which was created to migrate
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,8 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'woc_eventmanager_Rutuba_Chudasama.urls'
 
-#TEMPLATE_DIRS = [ os.path.join(BASE_DIR , 'templates'),]
-
+#template dir is given
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -123,6 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#for static files
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR , "assets"),
 )
@@ -141,6 +141,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
+#for Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True

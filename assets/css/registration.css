@@ -2,7 +2,7 @@ body
 {
     background-image:url("/static/images/back6.jpg");
     background-size: cover;
-    height:100%;
+    height:90vh;
     font-family:'century gothic';
 }
 
@@ -11,10 +11,10 @@ body
     overflow:auto;
     color:black;
     width:40%;
-    font-size:20px;
+    font-size:1.50vw;
     text-align:center;
-    padding:50px;
-    margin:20px 40px 20px 40px;
+    padding:3.5%;
+    margin:1.25% 3.5%;
     font-family:'century gothic';
     font-weight:bold;
     backdrop-filter: blur(50px);
@@ -33,16 +33,18 @@ h1
 }
 .space h3
 {
-    margin-top:150px;
-    padding-left:150px;
-    font-size:50px;
+    margin-top:27%;
+    padding-left:23%;
+    font-size:3.5vw;
+    width:50%;
     backdrop-filter: blur(8px);
 }
 
 .form input,textarea
 {
-    margin:10px;
-    padding:5px;
+    margin:1.6%;
+    padding:0.8%;
+    font-size:0.6em;
     font-family:'century gothic';
     border:1px solid black;
 }
@@ -53,7 +55,7 @@ h1
 }
 span
 {
-    font-size:15px;
+    font-size:0.75em;
     color:white;
 }
 
@@ -62,6 +64,6 @@ span
     background-color:black;
     color:white;
     font-weight: bold;
-    font-size:15px;
-    padding:10px 20px 10px 20px;
+    font-size:0.75em;
+    padding:1.5% 3%;
 }

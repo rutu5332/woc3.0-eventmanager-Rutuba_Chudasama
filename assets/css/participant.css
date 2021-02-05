@@ -2,7 +2,7 @@ body
 {
     background-image:url("/static/images/back2.jpg");
     background-size: cover;
-    height:100%;
+    height:90vh;
     font-family:'century gothic';
 }
 a
@@ -16,10 +16,10 @@ a
     overflow:auto;
     color:black;
     width:40%;
-    font-size:20px;
+    font-size:2.5vh;
     text-align:center;
-    padding:50px;
-    margin:60px 40px 20px 40px;
+    padding:3.75%;
+    margin:4% 3.5% 1.25% 3.5%;
     font-family:'century gothic';
     backdrop-filter: blur(50px);
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -43,21 +43,21 @@ h1
 }
 .space h5
 {
-    margin-top:10px;
-    padding-left:150px;
-    font-size:20px;
+    margin-top:5%;
+    padding-left:10%;
+    font-size:2vw;
 }
 
 .space h3{
-    margin-top:50px;
-    padding-left:150px;
-    font-size:50px;
+    margin-top:5%;
+    padding-left:15%;
+    font-size:3vw;
 }
 
 .details
 {
-    padding-left:150px;
-    font-size:20px;
+    padding-left:15%;
+    font-size:1.5vw;
 }
 
 .events
@@ -68,7 +68,7 @@ h1
     width:80%;
     margin-left:10%;
     margin-top:20px;
-    font-size:20px;
+    font-size:1.25vw;
     padding:10px;
     backdrop-filter: blur(50px);
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -78,27 +78,29 @@ h1
 }
 .events label
 {
-    font-size:15px;
+    font-size:0.6em;
     text-align:center;
 }
 
 .events li
 {
     list-style-type: none;
-    padding-bottom:5px;
-    margin-bottom:5px;
+    padding-bottom:0.9%;
+    margin-bottom:1%;
     border-bottom:2px solid black;
     width:45%;
+    height:15vw;
     float:left;
-    margin-right:20px;
+    margin-right:1.8%;
 }
 
 
 
 .form input,textarea
 {
-    margin:10px;
-    padding:5px;
+    margin:1.9%;
+    padding:0.9%;
+    font-size:0.85vw;
     font-family:'century gothic';
     border:1px solid black;
 }
@@ -109,7 +111,7 @@ h1
 }
 span
 {
-    font-size:15px;
+    font-size:0.75em;
     color:white;
 }
 
@@ -118,6 +120,6 @@ span
     background-color:black;
     color:white;
     font-weight: bold;
-    font-size:15px;
-    padding:10px 20px 10px 20px;
+    font-size:0.8em;
+    padding:1.5% 3%;
 }

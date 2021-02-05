@@ -2,16 +2,15 @@ body
 {
     background-image:url("/static/images/back5.jpg");
     background-size: cover;
-    height:100%;
     
 }
 .main
 {
     overflow:auto;
     color:white;
-    font-size:30px;
-    padding:50px;
-    margin:40px;
+    font-size:2vw;
+    padding:5%;
+    margin:4%;
     margin-top:60px;
     font-family:'century gothic';
     backdrop-filter: blur(8px);
@@ -23,12 +22,12 @@ body
     height:30%;
     width:10%;
     float:left;
-    margin-left:100px;
+    margin-left:10%;
 }
 .head
 {
     font-family:'Maiandra GD';
-    font-size:75px;
+    font-size:2.5em;
     text-shadow: 2px 2px 8px #FF0000;
 }
 .main a
@@ -44,7 +43,7 @@ h1,h2,h3,h4,h5,h6{
 }
 h1 sub
 {
-    font-size:18px;
+    font-size:0.25em;
     font-family:'century gothic';
 }
 .row

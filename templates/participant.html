@@ -25,7 +25,7 @@
                 {% for event in events%}
                  {% if event.is_past_due %}
                     <a href="Participant_Registration?id={{event.id}}">
-                        <li> <b>{{ event.name }} </b> <br> <br>
+                        <li class ="container"> <b>{{ event.name }} </b> <br> <br>
                             <b> Description: </b> {{event.description}}<br><br>
                             <b> Date(s):</b> {{ event.fromdate }} - {{ event.todate }}<br>
                             <b> Time :</b>{{event.fromtime}} - {{event.totime}} <br>

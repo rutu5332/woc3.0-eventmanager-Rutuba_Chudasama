@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+import datetime
 
 # Create your models here.
 
@@ -8,11 +9,11 @@ class Event(models.Model):
     description=models.TextField()
     location=models.CharField(max_length=50)
     fromdate = models.DateField()
-    fromtime =models.CharField(max_length=10)
+    fromtime =models.TimeField()
     todate = models.DateField()
-    totime =models.CharField(max_length=10)
+    totime =models.TimeField()
     enddate = models.DateField()
-    endtime =models.CharField(max_length=10)
+    endtime =models.TimeField()
     host_email = models.EmailField()
     host_pass = models.CharField(max_length=15)
 
@@ -20,7 +21,7 @@ class Event(models.Model):
         return self.name
     
     def is_past_due(self):
-        return date.today() < self.enddate
+        return ( date.today() < self.enddate)
 
 class Participant(models.Model):
     name=models.CharField(max_length=20)
