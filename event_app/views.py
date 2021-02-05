@@ -91,8 +91,7 @@ def Participant_sub(request):
     Part.save()
     parti = Participant.objects.latest('id')
     eve = Event.objects.get(id =eid)
-    account_sid='AC23b004be8e062afc0d36f303cfa53c45'
-    auth_token='d054b4046b34e4ec8e496df5a0a3922b'
+    
     client=Client(account_sid,auth_token)
     msg2 = "Thank you "+name + " for registering your participation with us.\n\nParticipant Id : "+str(parti.id) 
     msg2+= "\nEvent Name : "+eve.name +"\nLocation : "+eve.location +"\nDate(s) : "+str(eve.fromdate) + " - " +str(eve.todate)
